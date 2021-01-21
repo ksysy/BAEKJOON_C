@@ -1,0 +1,14 @@
+#10430_나머지
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b, c;
+	cin >> a >> b >> c;//2<=a,b,c<=10000
+	cout << (a + b) % c << "\n";
+	cout << ((a % c) + (b % c)) % c << "\n";
+	cout << (a * b) % c << "\n";
+	cout << ((a % c) * (b % c)) % c << "\n";
+
+	return 0;
+}//5 8 4 / 1 1 0 0

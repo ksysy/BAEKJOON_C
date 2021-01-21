@@ -1,0 +1,25 @@
+#10172_개
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "|\\_/|\n";
+	cout << "|q p|   /}\n";
+	cout << "( 0 )\"\"\"\\\n";
+	cout << "|\"^\"`    |\n";
+	cout << "||_/=\\\\__|\n";
+
+	return 0;
+}
+// “ or \ 출력하고 싶으면 \” \\ 이용
+// 백준에서 출력결과 복사하면 “출력 형식이 잘못되었습니다” 결과 나옴
+// using namespace std; 사용하는 것과 안 하는 것 별 차이 x 메모리 차지 용량도 같음
+#include <stdio.h>
+int main() {
+    printf("|\\_/|\n");
+    printf("|q p|   /}\n");
+    printf("( 0 )\"\"\"\\\n");
+    printf("|\"^\"`    |\n");
+    printf("||_/=\\\\__|\n");
+    return 0;
+} // 위 코드보다 메모리 1000KB 적게 차지!
