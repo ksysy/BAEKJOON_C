@@ -1,0 +1,66 @@
+#1110_더하기 사이클
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x;
+	cin >> x;
+	int cnt = 1;
+	int n = x;
+	int n1 = n / 10;
+	int n2 = n % 10;
+	int sum = n1 + n2;
+	n = n2 * 10 + sum % 10;
+
+	while (x!=n) {
+		n == x;
+		int n1 = n / 10;
+		int n2 = n % 10;
+		int sum = n1 + n2;
+		n = n2 * 10 + sum % 10;
+		cnt++;
+	}
+	cout << cnt;
+
+	return 0;
+}
+2)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x;
+	cin >> x;
+	int cnt = 0;
+	int n = x;
+
+	while (1) {
+		n = (n % 10) * 10 + (n / 10 + n % 10) % 10;
+cnt++;
+		if (n == x) break;
+	}
+	cout << cnt;
+
+	return 0;
+}
+3)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int x;
+	cin >> x;
+	int cnt = 0;
+	int n = x;
+	do {
+		n = (n % 10) * 10 + (n / 10 + n % 10) % 10;
+cnt++;
+	}
+
+	while (x != n);
+	cout << cnt;
+
+	return 0;
+}
+//do~while문

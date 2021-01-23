@@ -1,0 +1,29 @@
+#10952_A+B - 5
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b;
+	cin >> a >> b;
+
+	while (a != 0 || b != 0) {
+		cout << a + b << "\n";
+		cin >> a >> b;
+	}
+
+	return 0;
+}
+2)
+#include <cstdio>
+
+int main() {
+	int a, b;
+	while (scanf("%d %d", &a, &b) == 2) {
+		if (a != 0 || b != 0) {
+			printf("%d\n", a + b);
+		}
+	}
+}
+// scanf("%d %d", &a, &b) == 2
+두 개의 정수를 입력하는 동안 loop

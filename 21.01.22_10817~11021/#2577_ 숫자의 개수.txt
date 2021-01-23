@@ -1,0 +1,21 @@
+#2577_ 숫자의 개수
+#include <iostream>
+using namespace std;
+
+int main() {
+	int a, b, c;
+	cin >> a >> b >> c;
+	int go = a * b * c;
+	for (int i = 0; i < 10; i++) {
+		int gop = go;
+		int cnt = 0;
+		for (int j = 0; j < 10; j++) {
+			if ((gop % 10) == i) cnt++;
+			gop /= 10;
+			if (gop == 0) break;
+		}
+		cout << cnt << "\n";
+	}
+
+	return 0;
+}
