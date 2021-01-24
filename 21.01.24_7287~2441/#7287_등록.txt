@@ -1,0 +1,9 @@
+#7287_등록
+#include <iostream>
+using namespace std;
+
+int main() {
+	cout << "32\n" << "mog023";
+
+	return 0;
+}
