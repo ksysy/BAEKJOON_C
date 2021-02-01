@@ -1,0 +1,21 @@
+#10809_알파벳 찾기
+#include <iostream>
+using namespace std;
+
+int main() {
+	char str[100];
+	cin >> str;
+
+	for (char i = 'a'; i <= 'z'; i++) {
+		int n = -1;
+		for (int j = 0; str[j]; j++) {
+			if (str[j] == i) {
+				n = j;
+				break;
+			}
+		}
+		cout << n << " ";
+	}
+
+	return 0;
+}

@@ -1,0 +1,41 @@
+#2750_수 정렬하기
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int N, arr[1000];
+	cin >> N;
+	for (int i=0; i < N; i++) {
+		cin >> arr[i];
+	}
+	for (int i=0; i < N; i++) {
+		for (int j = i + 1; j < N; j++) {
+			if (arr[i] > arr[j]) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+	for (int i = 0; i < N; i++) {
+		cout << arr[i] << "\n";
+	}
+	return 0;
+}
+2)
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	int n, i;
+	int arr[1000];
+	scanf("%d", &n);
+	for (i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
+	}
+	sort(arr, arr + n);
+	for (i = 0; i < n; i++) {
+		printf("%d\n", arr[i]);
+	}

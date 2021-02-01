@@ -1,0 +1,30 @@
+#4344_평균은 넘겠지
+#include <iostream>
+using namespace std;
+
+int main() {
+	int C, arr[1000];
+	float N;
+	cin >> C;
+	for (int i = 0; i < C; i++) {
+		float sum = 0;
+		int cnt = 0;
+		cin >> N;
+		for (int j = 0; j < N; j++) {
+			cin >> arr[j];
+			sum += arr[j];
+		}
+		for (int j = 0; j < N; j++) {
+			if (sum / N < arr[j]) cnt++;
+		}
+		cout << fixed;
+		cout.precision(3);
+		cout << cnt / N * 100 << "%\n";
+	}
+
+	return 0;
+}
+// ex) double n=1234.5678
+// cout.precision(5): 정수자리 포함 전체 5자리 출력 -> 1234.6
+// cout << fixed; cout.precision(6): 소수점 아래 6자리 출력 -> 1234.567800
+// cout.unsetf(ios::fixed)   /   cout.setf(ios::fixed); cout.precision(5) : 설정 해제 / 설정

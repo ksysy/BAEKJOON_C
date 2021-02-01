@@ -1,0 +1,36 @@
+#1065_한수
+1)
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	cin >> n;
+	int res = 99;
+	int q, w, e;
+	if (n >= 1 && n < 100) res = n;
+	if (n >= 100 && n < 1000) {
+		for (int i = 100; i <= n; i++) {
+			q = i / 100;
+			w = i % 100 / 10;
+			e = i % 100 % 10;
+			if ((q - w) == (w - e)) res++;
+		}
+	}
+	if (n == 1000) res = 144;
+	cout << res;
+
+	return 0;
+}
+2)
+#include <stdio.h>
+int main(){
+    int n, count = 99;
+    scanf("%d", &n);
+    if(n < 100) printf("%d", n);
+    else{
+        for(int i = 100; i<=n; i++) if(i%10 + i/100 == i/10%10*2) count++;
+        printf("%d", count);
+    }
+}
+//등차수열: i%10 + i/100 == i/10%10*2
